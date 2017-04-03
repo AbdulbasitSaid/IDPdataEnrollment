@@ -1,8 +1,11 @@
 package com.campostech.abdulbasit.idpdataenrollment;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ShareCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -82,13 +85,31 @@ public class Home extends AppCompatActivity
 
         if (id == R.id.enrollment) {
             // Handle the camera action
+            Intent intent = new Intent(this,Enrollment.class);
+            startActivity(intent);
         } else if (id == R.id.verification) {
-
+            Intent intent = new Intent(this,Verification.class);
+            startActivity(intent);
         } else if (id == R.id.logout) {
-
+           System.exit(0);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    public  void  enrollment(View view)
+    {
+        Intent intent = new Intent(this,Enrollment.class);
+        startActivity(intent);
+    }
+    public  void verification(View view)
+    {
+        Intent intent = new Intent(this,Verification.class);
+        startActivity(intent);
+    }
+    public void detail(View view)
+    {
+        Intent intent =new Intent(this,Detail.class);
+        startActivity(intent);
     }
 }
