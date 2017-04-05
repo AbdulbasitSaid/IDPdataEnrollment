@@ -5,11 +5,13 @@
         <item
             android:id="@+id/enrollment"
             android:icon="@drawable/ic_person_add_black_24dp"
-            android:title="Enrollment" />
+            android:title="Enrollment"
+            />
         <item
             android:id="@+id/verification"
             android:icon="@drawable/ic_fingerprint_black_24dp"
-            android:title="Verification" />
+            android:title="Verification"
+            />
         <item
             android:id="@+id/logout"
             android:icon="@drawable/ic_lock_outline_black_24dp"
